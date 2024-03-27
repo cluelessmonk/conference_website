@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ch.css">
+</head>
+<body background="2.png">
+    <table class="table" bgcolor="#FFFFFF" align="center" cellpadding="o" cellspacing="0" style="vertical-align:top" border="2px">
+
+<tbody>
+    <tr>
+    <td colspan="2" class="header">
+        <img align="middle" height="110%" width="100%" src="banner.png">
+    </td>
+</tr>
+
+<tr>
+    <script language="JavaScript1.2">
+    var line = new Array()
+
+
+    //Specify font size for scoller
+    var ts_fontsize = "18px"
+
+    //--Don't edit below this line
+
+    var longestmessage = 1
+    for (i = 2; i < line.length; i++) {
+        if (line[i].length > line[longestmessage].length)
+            longestmessage = i
+    }
+
+    //Auto set scroller width
+    var tscroller_width = line[longestmessage].length
+
+    lines = line.length - 1 //--Number of lines
+
+    //if IE 4+ or NS6
+    if (document.all || document.getElementById) {
+        document.write('<form name="bannerform">')
+        document.write('<input type="text" name="banner" size="' + tscroller_width + '"')
+        document.write('  style="background-color: ' + document.bgColor + ';color: ' + document.body.text +
+            '; font-size:16px; border: medium none" onfocus="blur()">')
+        document.write('</form>')
+    }
+
+    temp = ""
+    nextchar = -1;
+    nextline = 1;
+    cursor = "\\"
+
+    function animate() {
+        if (temp == line[nextline] & temp.length == line[nextline].length & nextline != lines) {
+            nextline++;
+            nextchar = -1;
+            document.bannerform.banner.value = temp;
+            temp = "";
+            setTimeout("nextstep()", 1000)
+        } else if (nextline == lines & temp == line[nextline] & temp.length == line[nextline].length) {
+            nextline = 1;
+            nextchar = -1;
+            document.bannerform.banner.value = temp;
+            temp = "";
+            setTimeout("nextstep()", 1000)
+        } else {
+            nextstep()
+        }
+    }
+
+    function nextstep() {
+
+        if (cursor == "\\") {
+            cursor = ""
+        } else if (cursor == "|") {
+            cursor = ""
+        } else if (cursor == "http://www.mnnit.ac.in/") {
+            cursor = "-"
+        } else if (cursor == "-") {
+            cursor = ""
+        }
+
+
+        nextchar++;
+        temp += line[nextline].charAt(nextchar);
+        document.bannerform.banner.value = temp + cursor
+        setTimeout("animate()", 25)
+    }
+
+    //if IE 4+ or NS6
+    if (document.all || document.getElementById)
+        window.onload = animate
+    // -->
+    </script>
+    
+</tr>
+
+<tr>
+    <td style="vertical-align:top;width:11%">
+        <center>
+            <div style="background-color:transparent;vertical-align:center" width="240" height="200">
+        </div></center>
+     
+        <br>
+        <center>
+            <div style="background-color:#2FE149"><strong></strong></div>
+        </center>
+        <br><br>
+    </td>
+<td class="content" style="vertical-align:top" align="center" width="30%">
+    <div class="contentblock" style="background-image: url('back.png'); background-repeat:repeat-y;  background-size:1655px 1250px">
+        <div style="text-align:center;">
+            <h1 class="mainheading" >
+                <font color="black">Call for Papers<h1>
+        </h1></font></h1></div><font color="white">
+        <p style="color:#034811;margin-left:37px;font-weight:bold;font-size:35px">Technical Tracks:</p>
+        <p style="color:#c00000;margin-left:37px;font-weight:bold;font-size:20px">Following are the technical tracks and topics for the technical
+            papers to be submitted in the conference.</p>
+        <h1 style="color:#00ba24;margin-left:37px;font-weight:bold;font-size:22px">Power, Energy &amp; Control:</h1>
+        
+            <p style="color:black;margin-left:37px;margin-right:10px;font-size:15px">Control Systems, Instrumentation &amp; Measurement, Dielectrics
+                &amp; Electrical Insulation, EHV AC &amp; HVDC Transmission, Electric
+                Vehicle/ Mobility, Energy storage &amp; Battery Charging
+                Techniques, Industrial Drives &amp; Applications, Intelligent
+                Transportation Systems, Modelling &amp; Simulation of Machines,
+                Power Electronic Converters, Power Quality &amp; EMI, Power
+                System Operation &amp; Control, Power System Protection,
+                Regulation &amp; Electricity Market, Renewable Energy &amp; Grid
+                Integration, Robotics &amp; Automation, Smart Grid &amp; Micro Grid
+                Technologies.</p>
+
+        <h1 style="color:#00ba24;margin-left:37px;font-weight:bold;font-size:22px">Electronics, Communication &amp; Signal Processing:</h1>
+
+        <p style="color:black;margin-left:37px;margin-right:10px;font-size:15px">Antennas &amp; Propagation, Circuits &amp; Systems, Communication,
+            Consumer Electronics, &amp; Electromagnetics, Electron Devices &amp;
+            Solid-State Circuits, Micro &amp; Nano-electronics, Photonic
+            Technology &amp; Applications, Optical Communication, RF,
+            Microwave, &amp; Millimetre Wave Techniques, Ultrasonic,
+            Ferroelectrics, Sensors &amp; Sensing Systems, Signal, Image &amp;
+            Video Processing, VLSI design, Wireless Technologies.</p>
+
+        <h1 style="color:#00ba24;margin-left:37px;font-weight:bold;font-size:22px">Computer Networks &amp; Machine Learning:</h1>
+
+        <p style="color:black;margin-left:37px;margin-right:10px;font-size:15px">Artificial &amp; Augmented Intelligence and their applications, Big
+            Data Analysis, Biometrics &amp; RFID, Computational Intelligence,
+            Computer Networks, Computer Vision, Data &amp; Business
+            Analytics, Deep Learning, Image &amp; Video Processing, Internet of
+            Things, Machine learning, Wireless Networks &amp; Security, 5G
+            Networks &amp; Cloud Computing.</p>
+
+            
+        <h1 style="color:#00ba24;margin-left:37px;font-weight:bold;font-size:22px">Mechanical Systems and Mechatronics:</h1>
+
+        <p style="color:black;margin-left:37px;margin-right:10px;font-size:15px">Aerospace Engineering, Computational Fluid Dynamics,
+            Composite Materials, Finite Element Methods, Heat &amp; Mass
+            Transfer, Manufacturing Technology, Mechatronics, MEMS,
+            Refrigeration &amp; Cryogenics, Smart Materials &amp; Mechanics, Solid
+            Mechanics.</p>
+
+        <h1 style="color:#00ba24;margin-left:37px;font-weight:bold;font-size:22px">Applied Sciences:</h1>
+
+        <p style="color:black;margin-left:37px;margin-right:10px;font-size:15px">Applied Superconductivity, Bioinformatics, Biomedical
+            Engineering, Computational Biology, Emerging Technologies in
+            Education, Healthcare &amp; Agriculture etc., Engineering in
+            Medicine &amp; Biology, Geo-informatics and Transportation
+            Engineering, Geoscience &amp; Remote Sensing, Nano-
+            biotechnology &amp; Applications, Nuclear Science, Pervasive
+            Computing, Social &amp; Humanitarian Implications of Technology,
+            Statistical Methods, Stability Theory.</p>
+        
+    
+        
+
+        <p style="color:#0070C0;margin-left:37px;font-weight:bold;font-size:20px">Best Paper Awards:</p>
+        <ul style="list-style-type:disc;color:black">
+            <li>A <b>Best Paper Award </b>will be given in each technical track.. </li><br>
+           
+        </ul>
+        
+        
+
+
+
+        <p></p>
+        
+    </font></div><font color="white">
+
+    <!--/div-->
+    
+</font></td>
+</tr>
+
+    </tbody>
+    </table>
+    
+
+    <footer>
+        <tr>
+        <tr class="footer">
+            <td colspan="2" background="footer.png" style="text-align:center">Copyright © MNNIT Allahabad. All rights reserved.Best viewed in Firefox3.6 &amp; Internet Explorer6.0 onwards.<br>
+                Developed and Managed by  <a style="text-decoration:none" href="#"><b>member A</b></a> and <a style="text-decoration:none" href="#"> <b>member b</b></a>
+                <br>
+                </td>
+        </tr>
+    </footer>
+
+</body>
+</html>

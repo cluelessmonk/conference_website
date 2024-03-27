@@ -7,3 +7,47 @@ footer {
     color: white;
     text-align: center;
   }
+  table{
+    border-color: white;
+  }
+  .contentblock{
+    margin: 12px;
+    border:2px solid;
+    border-color: lightblue;
+
+  }
+  
+  .mainheading { 
+    background-color: #ef6115
+    ;
+  } 
+  center {
+    display: block;
+    text-align: -webkit-center;
+}
+
+ul.menu {
+  list-style: none;
+  text-align: center;
+  margin: 4px;
+  padding: 5px;
+  font-size: 16px;
+  width: 220px;
+}
+.menu {
+  background-image: url(2.gif);
+  background-color: transparent;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  height: auto;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
